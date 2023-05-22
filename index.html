@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Picture Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <dialog id="dialog" close>
+        <form>
+            <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+        </form>
+        <h2 id="dialogid">Informatii intre sliduri</h2>
+        <p>When you opened the dialog, not that focus was added to the X. What would happen if there ws nothing
+            interactive in the dialog?</p>
+        <ol>
+            <li>Try closing this dialog using <kbd>Esc</kbd>. Does it work?</li>
+            <li>Close this modal with a form submission (the X): if the formmethod is set to `dialog`, the dialog
+                will close. (open the dialog up again after you try it.)</li>
+            <li>Activate the "close the dialog" button. Where does focus go?</li>
+        </ol>
+        <p>If these two buttons weren't included, how could the user close the dialog?</p>
+        </form>
+    </dialog>
+    <div class="grid">
+
+        <div id="quiz">
+            <h1>Picture Quiz</h1>
+            <hr style="margin-bottom: 20px">
+            <p id="question"></p>
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+            </div>
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
