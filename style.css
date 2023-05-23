@@ -3,16 +3,16 @@ body {
 }
 
 .grid {
-  width: 85%;
-  /*68%;*/
-  height: 85vh;
-  /*520px;*/
+  height: calc(100vh - 76px);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   margin: 0 auto;
   background-color: #fff;
   padding: 10px 50px 50px 50px;
-  border-radius: 50px;
+  /* border-radius: 50px;
   border: 2px solid #cbcbcb;
-  box-shadow: 10px 15px 5px #cbcbcb;
+  box-shadow: 10px 15px 5px #cbcbcb; */
 }
 
 .buttons {
@@ -20,13 +20,14 @@ body {
 }
 
 .buttons img {
-  width: 300px;
+  
+  width: 550px;
 }
 
 .grid h1 {
   font-family: "sans-serif";
   background-color: #ffc107;
-  font-size: 35px;
+  font-size: 44px;
   text-align: center;
   color: #ffffff;
   padding: 2px 0px;
@@ -92,24 +93,75 @@ hr {
 
 /* Dialog */
 
-[aria-label="close"] {
-  /* appearance: none; */
-  float: right;
-  border: 2px solid #ffc107;;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-
 dialog {
-  width: 75rem;
-  height:50%;
+  width: 83%;
+  height: 50%;
   border-radius: 30px;
-  padding: 10px 50px 50px 50px;
+  padding: 10px 0px 25px 25px;
   border: 2px solid #cbcbcb;
   box-shadow: 5px 5px 10px #cbcbcb;
 }
 
-li {
-  margin-bottom: 1em;
+[aria-label="close"] {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 10px 0 0;
+  float: right;
+  border: 2px solid #ffc107;
+  ;
+  border-radius: 50%;
+  cursor: pointer;
 }
+
+#dialogbox {
+  margin-right: 20px;
+}
+
+#guess {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.correctguess {
+  color: #03bc00;
+}
+
+.wrongguess {
+  color: #e70000;
+}
+
+#note {
+  font-size: 1.5rem;
+}
+
+@media screen 
+and (min-width: 300px) 
+and (max-width:640px) 
+
+{
+
+  .grid {
+    height: calc(100vh - 76px);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .grid h1{
+    font-size: 36px;
+  }
+  
+  .grid #question{
+    font-size: 24px;
+  }
+
+
+  .buttons img {
+    width: 220px;
+  }
+
+  #progress{
+    font-size: 16px;
+  }
+}
+

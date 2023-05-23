@@ -4,6 +4,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Picture Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <style>
         
@@ -13,18 +14,12 @@
 <body>
     <dialog id="dialog" close>
         <form>
-            <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>X</button>
+            <button type="submit" aria-label="close" formmethod="dialog" formnovalidate>&times;</button>
         </form>
-        <h2 id="dialogid">Informatii intre sliduri</h2>
-        <p>When you opened the dialog, not that focus was added to the X. What would happen if there ws nothing
-            interactive in the dialog?</p>
-        <ol>
-            <li>Try closing this dialog using <kbd>Esc</kbd>. Does it work?</li>
-            <li>Close this modal with a form submission (the X): if the formmethod is set to `dialog`, the dialog
-                will close. (open the dialog up again after you try it.)</li>
-            <li>Activate the "close the dialog" button. Where does focus go?</li>
-        </ol>
-        <p>If these two buttons weren't included, how could the user close the dialog?</p>
+        <div id="dialogbox">
+            <div id="guess"></div>
+            <div id="note"></div>
+        </div>
         </form>
     </dialog>
     <div class="grid">
